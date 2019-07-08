@@ -19,8 +19,8 @@
     <!-- <h3> Your Guesses so far:</h3> -->
 
 
-    <!-- <script src="/assets/javascript/game.js"></script> -->
-    <script>
+    <script src="assets/javascript/game.js"></script>
+    <!-- <script>
 
     //Variables
     var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
@@ -51,12 +51,13 @@
         guesses=9;
         inputs=[];
         winsA.textContent = "Wins:  " + wins;
+        } 
 
-        }else { if (inputs.includes(userGuess)) {} else { 
+        else { if (inputs.includes(userGuess)) {} else { 
             guesses--;
             inputs.push(userGuess);
-            guesses.textContent ="Guesses Left: " + guesses;
-            inputsA.textContent ="Your Guesses so far: " + guesses
+            guessesA.textContent ="Guesses Left: " + guesses;
+            inputsA.textContent ="Your Guesses so far: " + inputs;
                 }
             }
 
@@ -78,7 +79,7 @@
 
     // document.getElementById('inputs').innerHTML="Your Guesses so far:   " + inputs;
 
-    </script>
+    </script> -->
 </body>
 
 
