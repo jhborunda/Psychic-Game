@@ -42,14 +42,4 @@ if(guesses===0){
     inputs = [];
     lossesA.textContent = "Losses: " + losses;
     }
-
-
 }
-//added into body of HTML
-// document.getElementById('wins').innerHTML="Wins:   " + wins;
-
-// document.getElementById('losses').innerHTML="Losses:   " + losses;
-
-// document.getElementById('guesses').innerHTML="Guesses Left:   " + guesses;
-
-// document.getElementById('inputs').innerHTML="Your Guesses so far:   " + inputs;
