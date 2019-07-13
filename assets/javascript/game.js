@@ -15,6 +15,15 @@ var inputsA = document.getElementById('inputs');
 
 //Computer guesses
 var computerChoice = alphabet[Math.floor(Math.random()*alphabet.length)];
+console.log(computerChoice);
+
+//Displayed before start of game
+winsA.textContent = "Wins:  ";
+lossesA.textContent = "Losses: ";
+guessesA.textContent ="Guesses Left: ";
+inputsA.textContent ="Your Guesses so far: "
+
+
 
 //Users input
 document.onkeypress = function(event){
@@ -22,24 +31,32 @@ var userGuess=event.key;
 
 if(userGuess === computerChoice){
     wins++;
-    guesses=9;
-    inputs=[];
-    winsA.textContent = "Wins:  " + wins;
+    reset();
     } 
 
-    else { if (inputs.includes(userGuess)) {} 
+    else { if (inputs.includes(userGuess)) {alert("Try a diffrent word!")}
     else { 
         guesses--;
         inputs.push(userGuess);
         guessesA.textContent ="Guesses Left: " + guesses;
         inputsA.textContent ="Your Guesses so far: " + inputs;
-            }
         }
 
-if(guesses===0){
+        }
+
+    if(guesses===0){
     losses++
-    guesses++;
-    inputs = [];
-    lossesA.textContent = "Losses: " + losses;
+    reset();
     }
+}
+
+let reset = function() {
+ computerChoice = alphabet[Math.floor(Math.random()*alphabet.length)];
+ console.log(computerChoice);
+ inputs = [];
+ guesses = 9;
+ winsA.textContent = "Wins:  " + wins;
+ inputsA.textContent = "Your Guesses so far: " + inputs;
+ guessesA.textContent ="Guesses Left: " + guesses;
+ lossesA.textContent = "Losses: " + losses;
 }
